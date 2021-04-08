@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+@media print {
+    body, .bg-Light {
+        color: #000;
+        background: #fff;
+    }
+
+    ul,
+    img,
+    .nutrition-block {
+        page-break-inside: avoid;
+    }
+
+    .breadcrumb,
+    .recipepro-block .right-box,
+    .refer-recipe,
+    .icon-group,
+
+    .recipepro-block .left-box .img-box .member-icon, footer, .scrollToTop.show, .higi-display,
+    .main-title h2::before, .main-title h2::after{
+        display: none;
+    }
+
+
+     .inner table, .inner table tbody th, .inner table tbody td{
+        background: #fff;
+        border: 1px solid #ccc !important;
+    
+    }
+    .recipepro-info-block, .nutrition-block{
+        margin: 30px 0;
+    }
+
+    .nutrition-block::after, .higidetail-block .container::after{
+        content: "Copyright © 2006-2018 AJINOMOTO TAIWAN INC. All rights reserved.";
+        font-size: 0.7rem;
+        text-align: center;
+        display: block;
+    }
+
+    
+    .main-title{
+        margin:  0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        
+    }
+
+
+    .main-title::before{
+    content: url(../img/logo_print.png);
+
+    }
+
+    .main-title h2{display: block;font-size: 1.5rem;}
+
+    .subheader {
+        font-size: 2.1rem;
+    }
+
+
+    .recipepro-block .left-box {
+        max-width: 60%;
+    }
+
+    .higidetail-block .col-lg-6.col-md-8{
+        max-width: 50%;
+    }
+
+
+    .recipepro-block .left-box .img-box img{
+        max-height: 380px;
+        width: auto;
+    }
+
+
+
+    .recipepro-block .type-box {
+        max-width: 40%;
+    }
+
+    .recipepro-info-block .col-md-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .higidetail-block .right-box .img-box{
+        height: 150px;
+        width: 150px;
+    }
+
+    .higidetail-block .right-box .img-box img{
+        height:150px;
+        width: auto;
+    }
+}
+
+/* 列印頁面設定 */
+@page {
+    size: A4 portrait;
+    /*a4尺寸 直式 */
+    margin: 1cm;
+    /*邊距1公分*/
+
+}

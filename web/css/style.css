@@ -1,0 +1,1174 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Noto+Sans+TC:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap');
+/* @import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css'); */
+
+/* font-family: 'Kaushan Script', cursive;
+font-family: 'Noto Sans TC', sans-serif; */
+
+html, body {font-family: 'Noto Sans TC', sans-serif, Arial, "微軟正黑體", "Microsoft JhengHei";position: relative;overflow-x: hidden;color: #333;font-size: 16px;}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    font-weight: 400;
+}
+p {font-size: 1rem;line-height: 1.8rem;margin: 0;}
+a, a:hover {text-decoration: none;transition-duration: 0.3s;}
+a {color: #333;}
+a:hover {color: #ee1c26;}
+dl, dd, dt, ol, ul {  padding: 0;}
+dl, dd, dt {margin: 0;}
+td, th{font-weight: 500;}
+ul li {list-style-type: none;}
+img {width: 100%;height: auto;}
+.primary-red {color: #ee1c26;}
+.bg-Light {background: #fafafa;}
+.text-wrap {width: 100%;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;}
+.text-box span {display: block;}
+
+/* 0203edit */
+ .member-icon {
+    position: absolute;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 100px 0 0;
+    border-color: #ee1c26 transparent transparent transparent;
+    top: 0px;
+    left: 0px;
+    border-radius: 0%; 
+    line-height: 1; 
+    text-align: left;
+}
+
+.member-icon::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(129deg, rgba(255, 137, 96, 1) 0%, rgba(238, 28, 38, 0) 58%);
+}
+
+ .member-icon span {
+    color: #fff;
+    position: absolute;
+    top: -75px;
+    left: 1px;
+    width: 80px;
+    transform: rotate(-45deg);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+ .member-icon.small-tag {border-width: 80px 80px 0 0;} 
+
+ .member-icon.small-tag span{
+    top: -60px;
+    left: -3px;
+    font-size: 1rem;
+    width: 70px;
+ }
+
+ .member-icon.small-tag::before{
+    top: -80px;
+ }
+ /* 0203edit */
+
+
+.primary-btn {border-radius: 20px;padding: 0.5rem 1.5rem;background: #ee1c26;color: #fff;border: none;z-index: 1;position: relative;outline: none;overflow: hidden;/* transition: color 0.4s ease-in-out; */}
+.primary-btn::before {content: "";z-index: -1;position: absolute;bottom: 100%;left: 100%;width: 1em;height: 1em;border-radius: 50%;
+background-color: #ff5d25;transform-origin: center;transform: translate3d(-50%, 50%, 0) scale3d(0, 0, 0);transition: transform 0.3s ease-in-out;}
+.primary-btn:hover::before {transform: translate3d(-50%, 50%, 0) scale3d(20, 20, 20);}
+.primary-btn:hover {cursor: pointer;color: #fff;transition: transform 0.3s ease-in-out;}
+.cancel-btn {background: #999;}
+.cancel-btn::before {background-color: #ced4da;}
+.gobtn::after {content: "GO";font-family: "Kaushan Script", cursive;}
+.content, .inner {min-height: 700px;}
+
+/*--------NAV--------*/
+.main-nav {padding: 0 1rem;}
+.main-nav .nav-logo {width: 160px;}
+.nav-logo, .nav-switch {align-items: center;}
+.nav-box {justify-content: flex-end;}
+.nav-list li a {vertical-align: -webkit-baseline-middle;}
+.site-search {position: relative;}
+.site-search button {position: absolute;right: 0;padding: 0.375rem 0.75rem;background-color: transparent;color: #ee1c26;border-color: transparent;}
+.site-search input {border-radius: 20px;display: block;width: 200px;padding: 0.375rem 0.75rem;font-size: 1rem;line-height: 1.5;color: #ced4da;background-color: #fff;background-clip: padding-box;border: 1px solid #ced4da;transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;}
+
+@media (min-width: 1100px) {.nav-list li {padding: 1.5rem 2rem;}}
+
+@media (min-width: 992px) {
+    .main-nav .container {max-width: 1366px;}
+    .nav-list .active {position: relative;border-bottom: 3px solid #ee1c26;}
+    .nav-list .active::after {content: "";position: absolute;bottom: 0;left: 50%;width: 0;height: 0;border: 8px solid transparent;border-bottom-color: #ee1c26;transform: translate(-50%, 0);}
+    .nav-list li {padding: 1.5rem;}
+    .nav-switch {display: none;}
+}
+
+@media screen and (max-width: 992px) {
+    .main-nav {
+        padding: 0;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 50;
+        text-align: center;
+        min-height: 63px;
+        background: #fff;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .page h2 {margin-top: 30px;}
+    .nav-logo {margin: 0.5rem 0 0.5rem 1rem;}
+    .navbar-brand img {height: 37px;width: auto;}
+    .nav-switch {width: 35px;height: 25px;border: none;display: block;background: transparent;position: relative;padding: 0;margin: 0.5rem 1rem 0.5rem 0;}
+    .nav-switch:focus, .nav-switch:hover {text-decoration: none;outline: none;}
+    .nav-switch:not(:disabled):not(.disabled) {cursor: pointer;}
+    .burger .line {display: inline-block;background: #ee1c26;width: 100%;height: 5px;position: absolute;left: 0;border-radius: 4px;transition: all 0.4s;-webkit-transition: all 0.4s; -moz-transition: all 0.4s;}
+    .burger .line.line-1 {top: -4px;}
+    .burger .line.line-2 {top: 9px;}
+    .burger .line.line-3 {top: 22px;}
+    .burger[aria-expanded="true"] .line-1 {transform: translateY(11px) translateX(-1px) rotate(45deg);}
+    .burger[aria-expanded="true"] .line-2 {opacity: 0;}
+    .burger[aria-expanded="true"] .line-3 {transform: translateY(-15px) translateX(-1px) rotate(-45deg);}
+    .nav-list li:not(:last-child)::after {content: "";display: block;width: 40%;border-bottom: 2px solid #fff;margin: 0 auto;}
+    .nav-list li:nth-child(6)::after {border-bottom: 2px solid transparent;}
+    .nav-box {margin-top: 8px;position: relative;overflow-x: hidden;background: rgb(255, 137, 96);background: linear-gradient(138deg, rgba(255, 137, 96, 0.7) 0%, rgba(238, 28, 38, 0.7) 100%);width: 100%;}
+    .nav-box::after {background: url(../img/banner/index-bg.jpg) no-repeat top right / cover;content: "";display: block;position: absolute;top: 0; left: 0;width: 100%;height: 100%;z-index: -2;opacity: 1;}
+    .nav-list li a {display: block;font-size: 1.3rem;padding: 1.5rem 0;color: #fff;text-align: center;}
+    .site-search {width: 250px;margin: 0 auto;}
+    .site-search input { width: 100%;}
+}
+/*--------NAV END--------*/
+.breadcrumb a {color: #999;}
+.breadcrumb a:hover {color: #ee1c26;}
+.breadcrumb {background-color: #fff;font-size: 0.9rem;border-radius: 0;padding: 0.75rem 0;position: relative;}
+.breadcrumb-item.active {color: #ee1c26;}
+.breadcrumb-item+.breadcrumb-item::before {content: "\f054";font-family: "Font Awesome 5 Free";font-weight: 900;color: #999;}
+/*--------SWIPER SETTING--------*/
+.swiper-slide img {width: 100%;height: auto;}
+.swiper-button-next,
+.swiper-button-prev {background: none;top: 55%;z-index: 2;}
+.swiper-button-next::after,
+.swiper-button-prev::after {font-family: "Font Awesome 5 Free";font-weight: 900;font-size: 2rem;color: #fff;}
+.swiper-button-next::after {content: "\f0a9";}
+.swiper-button-prev::after {content: "\f0a8";} 
+.swiper-pagination {position: static;}
+.swiper-pagination-bullet-active {opacity: 1;background: #ee1c26;}
+.main-banner {position: relative;}
+.main-banner .swiper-slide img {max-width: 1920px;max-height: 600px;}
+/*--------SWIPER SETTING END--------*/
+
+/*--------右邊置頂按鈕--------*/
+.scrollToTop {
+    display: block;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    right: 40px;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    z-index: 10;
+    transform: scale(1, 1);
+    bottom: 100px;
+    background-color: #ee1c26;
+    border: 3px solid #fff;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scrollToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scrollToTop:hover {
+    text-decoration: none;
+    color: #fff;
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s ease-out;
+}
+
+/*--------右邊置頂按鈕 END--------*/
+
+/*--------全站標題--------*/
+.main-title,
+.sub-title {
+    color: #ee1c26;
+    text-align: center;
+}
+
+.main-title h2 {
+    display: inline-block;
+    position: relative;
+    font-size: 2.1rem;
+    font-weight: 400;
+}
+
+.main-title h2::before {
+    position: absolute;
+    right: -20px;
+    top: 40%;
+    content: "";
+    display: inline-block;
+    background: url(../img/titlede.png) no-repeat top left / contain;
+    width: 155px;
+    height: 54px;
+    z-index: 1;
+}
+
+.main-title h2::after {
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    width: 100%;
+    content: attr(data-title);
+    transform: translate(-50%, 0);
+    font-size: 1rem;
+    font-family: "Kaushan Script", cursive;
+}
+
+.sub-title h3 {
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 500;
+    z-index: 3;
+}
+
+.sub-title h3::before,
+.sub-title h3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub-title h3::before {
+    width: 100%;
+    height: 1px;
+    background: #ee1c26;
+    z-index: -2;
+}
+
+.sub-title h3::after {
+    width: 150px;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+}
+
+.subheader {
+    text-align: center;
+    color: #ee1c26;
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+.third-title {
+    font-size: 1rem;
+    border-bottom: 1px solid #ee1c26;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.third-title img {
+    max-width: 30px;
+    margin-right: 10px;
+    vertical-align: text-bottom;
+}
+
+/*--------全站標題END--------*/
+
+/*首頁+商品列表下方廣告區塊START*/
+.ad-box>div {margin: 10px 0;text-align: center;max-width: 420px;}
+.ad-box>div img {max-width: 420px;height: auto;}
+.ad-box a {display: block;overflow: hidden;}
+.ad-box a img {transition: all 0.3s ease-out;}
+.ad-box a img:hover {transform: scale(1.1, 1.1);}
+/*首頁+商品列表下方廣告區塊END*/
+
+/*--------首頁最新消息--------*/
+.index-news-block .list-box a>div {width: 47%;}
+/*首頁餐飲情報+餐飲情報共用START */
+.list-box-group {justify-content: flex-start;}
+.index-news-block .list-box .text-box span:first-child, .list-box-group .list-box .text-box span:first-child, .search-result .list-box .text-box .date{padding-bottom: 10px;}
+.list-box {padding: 10px;margin: 20px 0;}
+.list-box a {display: block;}
+.list-box a>div {  display: inline-block;vertical-align: top;}
+.img-box {position: relative;}
+.list-box .img-box {overflow: hidden;max-width: 290px;max-height: 210px;position: relative;}
+.list-box .text-box {margin-left: 20px;}
+.list-box a .text-box p {padding-top: 15px;border-top: 1px solid #ee1c26;}
+/*首頁餐飲情報+餐飲情報共用END */
+/*--------首頁最新消息END--------*/
+
+/*--------首頁食譜--------*/
+.index-recipe-block {width: 100%;background: url(../img/banner/index-bg.jpg) no-repeat top right / cover;}
+.index-recipe-block .left-box {position: relative;}
+.index-recipe-block .text-box {padding: 15px;width: 300px;background: #fff;position: absolute;z-index: 1;bottom: -50px;left: 50%;transform: translate(-50%, 0);-webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.3);box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.3);}
+
+.index-recipe-block .text-box::after {content: "";position: absolute;display: block;top: 50%;left: 50%;transform: translate(-50%, -50%);background: #fff;width:110%;height: 120%; min-height:100px;opacity: 0.4;z-index: -1;}
+.index-recipe-block .text-box p {border-top: 1px solid #ee1c26;-webkit-line-clamp: 3;}
+.index-recipe-block .primary-btn {position: absolute;bottom: -35px;left: 50%;transform: translate(-50%, 0);}
+.index-recipe-block .text-box span {padding-bottom: 10px;}
+/*--------首頁食譜 END--------*/
+
+/*--------首頁商品--------*/
+/*首頁商品+商品列表共用START*/
+.item-box {position: relative;width: 350px;height: 350px;overflow: hidden;margin: 0 auto;z-index: 1;}
+.item-box a {display: block;margin: 0 auto;width: 350px;height: 350px;border-radius: 350px;}
+
+.item-box::after {content: "";position: absolute;background: #fff;z-index: -1;top: 50%;left: 50%;transform: translate(-50%, -50%);border-radius: 350px;width: 350px;height: 350px;transition: all 0.3s ease-in-out;}
+.item-box:hover::after{background:rgb(255,234, 234,0.5);transition: all 0.3s ease-in-out;}
+.item-box .icon {display: block;width: 70px;height: 70px;overflow: hidden;margin: 10px auto;position: relative;}
+.item-box .icon img {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+.item-box .item {max-width: 130px;max-height: 170px;display: block;margin: 0 auto;overflow: hidden;}
+.item-box p {max-width: 200px;margin: 10px auto 0;font-size: 0.9rem;line-height: 1.5;text-align:center}
+
+/*首頁商品+商品列表共用END*/
+.product-display {position: relative;}
+.product-display .swiper-button-next {right: -5%;}
+.product-display .swiper-button-prev {left: -5%;}
+.product-display .swiper-button-next::after, .product-display .swiper-button-prev::after {color: #ee1c26;}
+
+/*--------首頁商品END --------*/
+
+/*--------餐飲情報 START--------*/
+.campaign-page .list-box a>div {width: 47%;}
+.filter-btn-group {margin: 0 auto 20px;text-align: center;}
+.filter-btn-group button {border: none;margin: 5px;}
+.list-box .tag-box {width: 100%;margin-top: 20px;}
+.tag {padding: 5px 20px;font-weight: 400;color: #fff;border-radius: 5px;}
+.tag-box {text-align: right;padding-right: 10px;}
+.tag-box span {display: inline-block;}
+.tag-box .tag {padding: 5px 15px;font-size: 0.8rem;}
+.color-all {background: #ee1c26;}
+.color-a {background: #428bca;}
+.color-b {background: #72bb53;}
+.color-c {background: #ffb253;}
+.color-d {background: #00c8f8;}
+.color-e {background: #b8d947;}
+.color-f {background: #f7c568;}
+.color-g {background: #f7bbad;}
+.goback-btn a {color: #ee1c26;}
+.goback-btn a:hover {color: #ff8960;}
+.goback-btn i {margin-right: 5px;}
+.title-box {border-bottom: 3px solid #ccc;padding-bottom: 10px;}
+.card-box {border-bottom: 1px solid #ccc;}
+.card-title {position: relative;padding-left: 10px;font-size: 1.5rem;line-height: 1.5;}
+.card-title::before {position: absolute;top: 0;left: 0;content: "";display: block;width: 5px;height: 100%;background: #ee1c26;}
+.card-date {color: #999;}
+.card-box .img-box {max-width: 800px;margin: 20px auto 0;}
+/*--------餐飲情報 END--------*/
+
+/*--------商品介紹 START--------*/
+.product-block {position: relative;background: url(../img/veg01.png) no-repeat top 10% left 5% / auto, url(../img/veg02.png) no-repeat bottom 10% right 5% / auto;}
+.product-block::before {content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #fafafa;z-index: -2;}
+.item-group .item-box {margin: 20px auto;}
+/*--------商品介紹 END--------*/
+
+/*--------商品詳細 START--------*/
+.productSlide .swiper-slide {max-width: 100%;max-height: 600px;text-align: center;border: 1px solid #ccc;padding: 20px;}
+.productSlide .swiper-slide img {max-height: 450px;width: auto;}
+.productSlide-thumb {margin-top: 20px;}
+.productSlide-thumb .swiper-slide {overflow: hidden;text-align: center;}
+.productSlide-thumb .swiper-slide img {max-height: 70px;height: 70px;width: auto;}
+.productDetail-page .inner .text-box {padding: 30px 40px;background: #fafafa;}
+.product-top .right-box span {background: #ff8960;padding: 5px 10px;font-size: 0.9rem;color: #fff;}
+.product-info {border: 28px solid #f7bbad;border-radius: 25px;position: relative;}
+.product-info::before {content: "";position: absolute;display: block;width: 50px;height: 75%;background: url(../img/note.png) repeat-y top right / contain;z-index: 3;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+.product-info>div {margin: 20px 0;}
+.product-info-box .title {min-width: 100px;max-width: 110px;}
+.product-info-box li {margin-bottom: 15px;}
+.text-e {text-align: right;min-width: 80px;}
+.text-h {text-align: right;min-width: 120px;}
+/*--------商品詳細 END--------*/
+
+/*--------相關料理 START--------*/
+.refer-box {width: 350px;height: 250px;position: relative;text-align: center;overflow: hidden;margin: 10px;}
+.refer-hover {z-index: 3;}
+.refer-hover:hover .refer-txt {visibility: visible;transition: all 0.3s ease-out;}
+.refer-hover img {transition: all 0.3s ease-out;}
+.refer-hover img:hover {transform: scale(1.1, 1.1);}
+.refer-txt {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;color: #ee1c26;z-index: 4;padding: 15px 0;visibility: hidden;pointer-events: none;}
+.refer-box .primary-btn {display: block;width: 140px;margin: 15px auto 0;}
+.refer-txt::after {content: "";position: absolute;background-color: rgba(255, 255, 255, 0.8);width: 100%;height: 100%;display: block;z-index: -2;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+.refer-txt h5 {font-size: 1rem;margin: 0;}
+.refer-txt h5::after {content: "";display: block;width: 40%;border-bottom: 1px solid #ee1c26;margin: 10px auto 0;}
+.refer-btn {padding: 5px 10px;border: 1px solid #fff;width: 100px;margin: 0 auto;}
+/*--------相關料理 END--------*/
+
+/*--------搜尋 START--------*/
+.search-block {position: relative;}
+.search-block::after {background: url(../img/banner/search-bg.jpg) no-repeat top left -10px / cover;content: "";display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -2;opacity: 1;}
+.search-box {background: #fff;border-radius: 10px;border: 1px solid #ccc;}
+.search-box p {color: #ee1c26;font-size: 1.1rem;border-bottom: 1px solid #ccc;padding-bottom: 15px;}
+/* .search-box .form-check-inline {width:120px; border: 1px solid greenyellow;} */
+.search-box .m-tb20{margin-bottom: 40px;}
+
+/*--------搜尋 END--------*/
+
+/*--------招客祕技 START--------*/
+.list-box .text-box .sp-text {color: #fff;position: relative;display: inline-block;padding: 0;}
+.list-box .text-box .sp-text::after {content: "";position: absolute;left: 0;top: 0;z-index: -1;height: 99%;width: 100%;background: #ff8960;}
+.higi-display .list-box {padding: 10px;margin: 0;}
+.higi-display .title {padding-bottom: 10px;}
+.higi-display .list-box .img-box {overflow: hidden;width: 220px;height: 220px;}
+.higi-display .list-box .text-box .sp-text {-webkit-line-clamp: 2;display: -webkit-box;padding: 0;margin-bottom: 15px;}
+.higi-display .list-box .text-box {margin-left: 15px;width: calc(100% - 240px);}
+.higi-display .list-box a .text-box p {border-color: #ccc;}
+.higi-display .higi-box {border-top: 1px solid #ccc;padding-top: 10px;}
+.higi-display .higi-box span {display: inline-block;font-size: 0.9rem;vertical-align: bottom;padding: 0;    width: calc(100% - 75px);}
+.higi-display .higi-box img {width: 70px;height: auto;}
+/*--------招客祕技 END--------*/
+
+/*--------招客祕技詳細 START--------*/
+.higidetail-block .right-box .text-box {position: relative;padding-left: 30px;}
+.higidetail-block .right-box .text-box::before {content: "";position: absolute;left: 0;top: 0;display: block;width: 30px;height: 105px;background: url(../img/spoon.png) no-repeat top left / contain;}
+.higidetail-block .right-box .text-box h4 {display: inline-block;font-size: 1.3rem;color: #333;margin: 0;vertical-align: middle;font-weight: 500;}
+.higidetail-block .right-box .text-box span {margin-top: 10px; font-weight: 500; font-size:1.4rem;color: #ee1c26;}
+.higidetail-block .right-box .text-box a {vertical-align: -webkit-baseline-middle;margin-left: 5px;}
+.icon-group {display: inline-block;}
+.icon-group a i {font-size: 1.8rem;transform: scale(1, 1);}
+.icon-group .icon-like {color: #ff8960;}
+.icon-group .icon-dislike, .icon-group .icon-print {color: #ccc;}
+.icon-group a:hover i {color: #ff8960;transform: scale(1.1, 1.1);transition: all 0.2s ease-out;}
+/* .higidetail-block .right-box .text-box .text-wrap {-webkit-line-clamp: 2;display: -webkit-box;} */
+.higidetail-block .right-box .img-box {height: 250px;overflow: hidden;border: 1px solid #ccc;text-align: center;}
+.higidetail-block .right-box .img-box img {height: 250px;width: auto;}
+.dish-box, .product-box {width: 50%;padding: 0 10px;}
+.higidetail-block .method-box .third-title{margin: 0;}
+.method-box {padding: 0 10px;}
+.method-box ul {padding: 0 0 0 40px;}
+.method-box ul li {border-bottom: 1px solid #ccc;padding: 10px 0; display: flex;}
+.method-box ul li img{max-width: 100px;margin-right: 20px;}
+/*--------招客祕技詳細 END--------*/
+
+/*--------專業食譜 START--------*/
+.refer-display .sub-title h3::after {background: #fafafa;}
+.refer-display .list-box .img-box {max-width: 100%;max-height: 240px;width: 100%;}
+.refer-display .list-box .text-box {margin: 10px 0 0;}
+
+ /* 0203edit */
+.refer-display .list-box .member-icon {
+    top: 10px;
+    left: 10px;
+}
+ /* 0203edit */
+.refer-display .list-box .text-box span {align-self: center;}
+.refer-display .list-box .text-box .title {padding: 0;}
+.refer-display .list-box .text-box .tag {font-size: 0.8rem;padding: 5px 15px;}
+.recipe-group .list-box .img-box {min-width: 290px;min-height: 200px;}
+.recipe-group .list-box .text-box {width: calc(100% - 320px);}
+.recipe-group .list-box .text-box .title {display: block;border-bottom: 2px solid #ee1c26;padding-bottom: 10px;font-size: 1.2rem;}
+.recipe-group .list-box .text-box .sp-text {margin-top: 10px;}
+
+
+/*DETAIL*/
+.recipeproDetail-page .subheader {display: inline-block;text-align: left;margin-bottom: 0;}
+.recipeproDetail-page .third-title {margin: 0;}
+.recipe-title {border-bottom: 1px solid #ee1c26;padding-bottom: 11px;}
+.recipepro-block .left-box .img-box{max-height: 555px;overflow: hidden;}
+.recipepro-block .recipe-box {padding: 0 0 15px 0;border-bottom: 1px solid #ccc;margin: 15px 0;}
+.recipepro-block .recipe-box .img-box {width: 90px;height: 90px;}
+.recipepro-block .recipe-box .img-box img {height: 100%;width: auto;}
+.recipepro-block .recipe-box .text-box {margin-left: 10px;width: calc(100% - 105px);}
+ /* 0203edit */
+.recipepro-block .recipe-box .member-icon{margin-bottom: 10px;display: block;}
+ /* 0203edit */
+.recipepro-block .type-box ul {padding: 0;margin: 0;}
+.recipepro-block .type-box li {padding: 10px;background: #fff;margin-right: 20px;min-width: 200px;margin-bottom: 10px;display: inline-block;vertical-align: top;}
+.recipepro-block .type-box ul span {vertical-align: middle;}
+
+.type-box .good-box{display: inline-block;vertical-align: top;}
+.type-box .good-box a{max-width: 60px;max-height: 90px;overflow: hidden;display: inline-block;}
+
+.recipepro-block .description {margin: 10px;-webkit-line-clamp: 1;}
+.recipepro-block .type-box .tag {background: #b8d947;padding: 7px 10px;font-size: 0.9rem;display: inline-block;text-align: center;line-height: 1.2;margin-right: 10px;}
+.recipepro-block .type-box p {display: inline-block;}
+.recipepro-info-block .method-box .recipe-box {padding: 0;margin: 10px 0;}
+.recipepro-info-block .method-box .recipe-box .img-box {width: 80px;height: 80px;}
+.method-box ul a {color: #ee1c26;}
+.method-box ul a:hover {color: #ffb253;}
+.recipepro-info-block .method-box ul {padding: 0;}
+.recipepro-info-block .method-box ul .sec-method {position: relative;padding:0 0 0 40px}
+.recipepro-info-block .method-box ul li, .recipepro-info-block .method-box ul .sec-method li {padding-left: 10px;}
+.recipepro-info-block .method-box ul .sec-method li:last-child {border-bottom: none;}
+.recipepro-info-block .method-box ul li{display: block;}
+.recipepro-info-block .method-box ol {list-style: none;counter-reset: li;padding: 0;}
+.recipepro-info-block .method-box ol li {counter-increment: li;padding: 10px 0;border-bottom: 1px solid #ccc; }
+.recipepro-info-block .method-box ol li span + p {display: inline-block;max-width: calc(100% - 44px);}
+
+/* .recipepro-info-block .method-box ol li::before, */
+.recipepro-info-block .method-box .group-num, .sec-method .group-num {
+    content: "";
+    font-family: "Baloo Chettan";
+    color: #ee1c26;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #ee1c26;
+    line-height: 26px;
+    text-align: center;
+    font-size: 1rem;
+    margin-right: 10px;
+    vertical-align: top;
+}
+.recipepro-info-block .method-box .none-num p{
+  margin-left: 44px;
+}
+.sec-method .group-num {position: absolute;left: 0;top: 5px;display: block; margin-top: 5px;}
+.recipepro-info-block .third-title span {font-size: 0.9rem;margin-left: 10px;}
+.nutrition-block p {display: none;text-align: right;color: #ff8960;}
+
+.recipe-nutrition-box {word-wrap: break-word;word-break: break-all;white-space: normal;font-size: 0.9rem;line-height: 1.5rem;border-collapse: separate;border-spacing: 0;width: 100%;max-width: 100%;}
+.recipe-nutrition-box tbody th {background-color: #f0f0f0;}
+.recipe-nutrition-box tbody th {border: 2px solid #f0f0f0;border-bottom: none;border-right: none;}
+.recipe-nutrition-box tbody td {border: 2px solid #f0f0f0;border-bottom: none;border-left: none;}
+.recipe-nutrition-box tbody tr:last-child th {border-bottom: 2px solid #f0f0f0;}
+.recipe-nutrition-box tbody tr:not(:first-child) th {border-top: 2px solid #fff}
+.recipe-nutrition-box tbody tr:last-child td { border-bottom: 2px solid #f0f0f0;}
+.recipe-nutrition-box th, .recipe-nutrition-box tr,.recipe-nutrition-box td {padding: 10px;}
+.recipe-nutrition-box {min-width: 910px;}
+.table-wrap {overflow: auto;}
+/*--------專業食譜 END--------*/
+
+/*--------聯絡我們 START--------*/
+.form-box label::after {content: "*";color: #ee1c26;}
+.form-box span {font-size: 0.8rem;/* margin-left: 10px; */color: #ee1c26;}
+.form-box a {text-decoration: underline;padding: 0 5px;color: #ee1c26;}
+.form-box .v-code input {width: 180px;margin: 0 10px;}
+.form-box .v-code input, .form-box .v-code img {vertical-align: middle;display: inline-block;}
+.form-box .v-code p {font-size: 0.9rem;margin-left: 10px;display: inline-block;}
+.form-box .v-code img {max-height: 40px;width: auto;}
+.wrong-page h1 {font-size: 6rem;color: #ee1c26;}
+.wrong-page p {font-size: 1.5rem;}
+.error {max-width: 500px;}
+.member-tab-pill {flex-direction: column;}
+.member-tab-pill .nav-link.active, .member-tab-pill .show>.nav-link {color: #fff;background-color: #ee1c26;}
+
+.fav-block .list-box {border-radius: 10px;background: #fff;margin-bottom: 20px;}
+.fav-block .list-box .img-box{width: 100px;height: 100px;}
+.fav-block .list-box .title {margin-top: 10px;}
+.fav-block.fav-recipe .img-box img {height: 100%;width: auto;}
+.fav-block .icon-group {vertical-align: middle; margin-bottom: 0;}
+
+/* 0203edit 圓角會員限定樣式 */
+.fav-block .member-icon, .recipepro-block .recipe-box .member-icon, .search-result .member-icon{
+    position: relative;
+    border-radius: 10px;
+    border: none;
+    line-height: normal;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    padding: 3px 10px;left: 0;
+    font-size: 0.9rem;
+    z-index: 3;
+    background: #ee1c26;
+    background: linear-gradient(160deg, rgba(255, 137, 96, 1) 15%, rgba(238, 28, 38, 1) 35%, rgba(238, 28, 38, 1) 100%);
+    color: #fff;
+    top: 3%;
+}
+.fav-block .member-icon::before, .recipepro-block .recipe-box .member-icon::before, .search-result .member-icon::before{
+    display: none;
+}
+/* 0203edit 圓角會員限定樣式 */
+.search-result .list-box .img-box img{max-width: 100px;width: 100px;height: auto;}
+.search-result .list-box .text-box{width: calc(100% - 130px)} 
+.search-result .list-box{border-bottom: 1px solid #ccc;}
+.search-result .list-box .text-box.title{vertical-align: -webkit-baseline-middle;display: inline-block;}
+
+/*--------條款--------*/
+.member-page h3{text-align: center;margin-bottom: 20px; color: #ee1c26;}
+.member-page h5, .member-page a{color:#f36b7f;font-weight: 500;}
+.member-page p{margin-bottom: 20px;}
+.member-page ol, .member-page ul{margin-left: 20px; margin-bottom:30px}
+.member-page ul li{list-style: disc;}
+.member-page li{margin-bottom:5px}
+/*--------條款 END--------*/
+
+/*--------鮮味調味料--------*/
+.safety-content{text-align: justify;}
+.safety-content h3{position: relative; font-weight: 500; line-height: 1.3;}
+.safety-content h3::before {
+    content: attr(data-title);
+    position: absolute;
+    right: 0;
+    top:-20px;
+    font-size: 0.8rem;
+    color: #cdcdcd;
+}
+.safety-content h3:nth-child(2)::before{right: 100px;}
+.safety-content h3::after {
+    position: absolute;
+    bottom: -20px;
+    left: -50px;
+    content: "";
+    display: inline-block;
+    width: 130px;
+    height: 4px;
+    background: #ee1c26;
+    
+}
+
+.safety-content .block{position: relative;
+margin-top: 50px; padding: 50px 0; 
+overflow: hidden;}
+.block::before,
+.block::after{ content: "";
+    position: absolute;  
+    top: 0;
+    display: block;}
+.block::before{
+z-index: -1;
+width: 65%;
+height: 100%;
+}
+
+.block::after{
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.block .box{
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);-moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.block a, .safety-content h3, .dr-block h4{display: inline-block;}
+.block h4{color:#073F80 ; font-weight: 500;  position: relative; font-size:1.3rem}
+
+
+.dr-block .row{
+    /*flex-direction: column;
+    max-height: 100vh;
+    align-items: stretch;
+     min-height: 1px; 
+    height: 800px;*/
+}
+
+.dr-block::before{
+    right: 0;
+    border-left:120px solid transparent;
+    border-top:1200px solid #fafafa;
+}
+
+.dr-block::after{
+    right: 0;
+    background: url(../img/anzen/01.jpg) no-repeat top left / cover;
+}
+/*before&after common setting*/
+.dr-block h4::before, .dr-block h4::after, .faq-content .box::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+}
+/*before&after common setting*/
+.dr-block h4{
+    margin-bottom: 30px;
+    line-height: 40px;
+}
+.dr-block h4::before{
+    left: 0px;
+    background: rgba(7, 63,128,0.3);
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+}
+
+.dr-block h4::after{
+    bottom: -10px;
+    right: 0px;
+    width: 70px;
+    height: 3px;
+    background: #073F80;
+}
+
+.dr-block .dr-box h4{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.1rem;
+    text-align: left;
+ 
+}
+ .dr-block .box{
+     max-width: 550px;
+     margin: 0 auto 30px;
+     padding: 20px;
+     background: #fff;
+} 
+
+.dr-block .dr-box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+.dr-block .dr-box .img-box{width: 40%;}
+.dr-block .dr-box .text-box{width: 60%;}
+.safety-block::before{left: 0;border-right:120px solid transparent;border-top:1200px solid #fafafa;}
+.safety-block::after{right: 0;background: url(../img/anzen/02.jpg) no-repeat top right / cover;}
+.safety-block .circle-box{display: flex;flex-wrap: wrap;justify-content: center;max-width: 800px;position: relative;}
+.safety-block .circle-box:after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    width: 400px;
+    height:400px;
+    z-index: -1;
+    background: url(../img/anzen/triangle.png) no-repeat center center / cover;
+}
+
+.safety-block .circle{
+    background-color: #fff;
+    max-width: 300px;
+    max-height: 300px;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    text-align: center;
+    padding: 30px 20px 20px;
+    margin: 20px auto;
+    border: 10px solid #FDDE2C ; 
+}
+.safety-block .circle img{max-width: 200px;display: block;margin: 0 auto;}
+.safety-block h4{display: inline-block;}
+.safety-block h4::before{
+content: attr(data-title);
+position: absolute;
+bottom: -8px;
+right: -11px;
+font-family: 'Kaushan Script', cursive;
+font-size: 3rem;
+color: rgba(7, 63,128,0.2);
+}
+.certify-block::before {
+    width: 55%;
+    right: 0;
+    border-left: 120px solid transparent;
+    border-top: 1200px solid #fafafa;
+}
+.certify-block::after {
+    right: 0;
+    background: url(../img/anzen/03.jpg) no-repeat top left / contain;
+}
+.certify {margin-left: auto;}
+.certify h4 {line-height: 1.5;}
+.certify .box {margin-bottom: 20px;}
+.certify .box .primary-red{font-size:1.2rem;font-weight: 500;margin-bottom: 10px;}
+.certify :nth-child(2).box{
+    background: #fff url(../img/anzen/FAO.png) no-repeat bottom right /25%;
+}
+
+.certify :nth-child(3).box{
+    background: #fff url(../img/anzen/efsa.png) no-repeat bottom right /40%;
+}
+
+.certify :nth-child(4).box{
+    background: #fff url(../img/anzen/fda.png) no-repeat bottom right / 30%;
+}
+
+.faq-content{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-content .box{
+margin: 20px;
+padding: 15px;
+position: relative;
+background: #fff;
+}
+
+.faq-content h4{
+font-size: 1.1rem;
+position: relative;
+cursor: pointer;
+margin:0;
+padding-right: 40px;
+line-height:1.5;
+
+}
+
+
+.faq-content h4::after{
+content: "\f078";
+position: absolute;
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+right: 15px;
+top:3px;
+transition: 0.2s;
+font-size: 1rem;
+color: #ee1c26
+}
+
+.faq-content .active h4::after{
+    transform: rotate(180deg);
+    color: #666;
+}
+
+.faq-content .box::before{
+    width:4px;
+    height: 0%;
+    background: #ee1c26;
+    left:0;
+    top: 0;
+    transition: 0.2s;
+}
+.faq-content .active::before{
+    height: 100%;
+    transition: 0.3s;
+}
+
+.faq-content p{
+display: none;
+padding: 10px;
+margin-top: 10px;
+}
+
+
+.safety-page .modal-body .title{
+    color: #ee1c26;
+    font-family: "Baloo Chettan";
+    position: relative;
+  display: inline-block;
+  margin: 0 auto 10px;
+  z-index: 1;
+}
+
+.safety-page .modal-body .title::after{
+    content: "";
+    background-color: #FFF9D9;
+    position: absolute;
+    display: block;
+    height: 8px;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+
+}
+
+.safety-page .modal-header{
+    border: none;
+    padding-bottom: 0px;
+}
+
+.safety-page .modal-body h5{
+    color: #ff8960;
+    font-weight: 500;
+}
+.safety-page .modal-body dl{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #FFF9D9;
+
+  
+}
+.safety-page .modal-body dl:nth-child(odd){
+    background-color: #f7bbad;
+    color: #fff;
+}
+
+.safety-page .modal-body dt, .safety-page .modal-body dd{
+    display: table-cell;
+}
+
+.safety-page .modal-body dt{
+    width: 60px;
+}
+/*--------鮮味調味料 END--------*/
+
+/*--------2020/01/02 新增 嚴選好素材 START--------*/
+.dot-separator::after {
+    content: "";
+    width: 100%;
+    height: 5px;
+    display: block;
+    background: url(../img/selected/graydot.svg) repeat-x scroll top center / contain;
+    margin: 20px 0;
+}
+.selected-block h1{color: #ff9600}
+.selected-block p{ color: #333;font-size: 1.2rem}
+.selected-block p span{ color: #888; font-size: 1rem; display: block; margin-bottom: 20px}
+.selected-block .description, .selected-box {position: relative;}
+.selected-block .description p{display: inline-block}
+.selected-block .description img{max-width: 450px; width: 250px;display: inline-block}
+.selected-box img{width: 100%;height: auto;}
+.port-box img{max-width: 300px;}
+.selected-box h3 {font-weight: 400;font-size: 1.5rem;display: inline-block;color: #fff;position: absolute;transform: rotate(-3deg);top: -40px;
+left: 0;}
+.selected-box:nth-child(4) h3 {background: url(../img/selected/selectedtag01.png)no-repeat center / contain;padding: 30px;}
+.selected-box:nth-child(4) {margin-top: 50px;padding: 60px 0 50px 60px;background: url(../img/selected/selectedBG01.png)no-repeat center / contain;}
+.selected-box:nth-child(5) h3 {background: url(../img/selected/selectedtag02.png)no-repeat center / contain;padding: 30px;top: 0px;}
+.selected-box:nth-child(5) {padding: 40px 50px 60px;background:  url(../img/selected/selectedBG02.png)no-repeat center bottom / contain;border-radius: 30px; /*#cde9f6*/}
+.selected-box:nth-child(7) h3 {background: url(../img/selected/selectedtag03.png)no-repeat center / contain;padding: 30px;top: 0px;}
+.selected-box:nth-child(7) {padding: 110px 0 50px 60px;}
+.selected-box:nth-child(8) h3 {background: url(../img/selected/selectedtag03.png)no-repeat center / contain;padding: 30px;top: 0px;}
+.selected-box:nth-child(8) {padding: 110px 0 50px 60px;}
+.selected-box .step{position: absolute;top:55%;left: 52%;transform: translate(-55%, -52%);width: 70%;}
+.selected-box .step p{text-align: center;color: #ff9600;font-size: 1.3rem;font-family: 'Baloo Chettan', 'Noto Sans TC', sans-serif, Arial, "微軟正黑體", "Microsoft JhengHei";}
+.selected-box.fish-made .row > div{ position: relative;}
+.qulity-check{flex-direction: row-reverse; }
+.qulity-check img{max-width: 350px;}
+.qulity-check .col-md-8:before{content: "";display: block;width: 0; height: 0; border-top: 15px solid transparent;border-bottom: 15px solid transparent;border-right: 35px solid #ffe9ee;position: absolute;bottom:30%;left: -30px;}
+.qulity-check .col-md-8{position: relative;background: #ffe9ee ;border-radius: 30px;padding: 50px;}
+.qulity-check .col-md-4{align-self: flex-end;}
+.dry-box {font-size: 0;}
+.dry-box li{ display: inline-block; margin-right: 20px;}
+.dry-box li p{font-size: 0.9rem;color: #ff9600;}
+.selected-block .resp-container{position: relative;overflow: hidden;/*padding-top: 56.25%;*/ max-width:800px;height: 440px;margin:0 auto;}
+.selected-block .resp-container iframe {position: absolute;top: 0;left: 0;width: 100%;height: 100%;border: 0;}
+/*--------2020/01/02 新增 嚴選好素材 END--------*/
+
+/*--------footer--------*/
+.footer {padding: 30px 0;background: #ee1c26;}
+.footer p {font-size: 0.8rem;margin: 0;color: #fff;}
+.footer a.privacy-btn {margin-left: 10px;color: #fff;font-size: 0.8rem;cursor: pointer;text-decoration: underline;}
+.footer a.privacy-btn:hover {color: #ff8960;}
+/*--------footer END--------*/
+
+/*--------分頁 START--------*/
+.pagination {padding: 10px 0;justify-content: center;}
+.pagination>li>a, .pagination>li>span {background-color: #fff;border: 1px solid #ee1c26;color: #666;}
+.pagination li a {position: relative;display: block;padding: .5rem .75rem;margin-left: -1px;line-height: 1.25;}
+.pagination li a:hover {color: #fff;text-decoration: none;background-color: #ee1c26;}
+.pagination li.active a {color: #fff;text-decoration: none;background-color: #ee1c26;}
+.pagination li a:not(:disabled):not(.disabled) {cursor: pointer;}
+/*--------分頁 END--------*/
+
+/*--------RWD--------*/
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .higi-display .list-box .img-box {width: 200px;height: 200px;}
+    .higi-display .list-box .text-box {margin-left: 10px;width: 50%;}
+    .higi-display .higi-box span {width: calc(100% - 80px);display: inline-block;}
+}
+
+@media screen and (max-width: 1200px) {
+    .item-box,.item-box::after {width: 290px;height: 290px;}
+    .item-box a {width: 200px;}
+    .item-box .icon {width: 60px;height: 60px;}
+    .item-box .item {max-width: 100px;max-height: 130px;}
+    .higidetail-block .right-box .img-box,
+    .higidetail-block .right-box .img-box img {height: 205px;}
+    .certify-block::after {
+        background: url(../img/anzen/03.jpg) no-repeat top left / cover;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .content {margin-top: 63px;}
+    .higidetail-block .right-box .text-box {margin-top: 30px;}
+    .swiper-button-next, .swiper-button-prev {top: 50%;}
+    .swiper-button-next::after, .swiper-button-prev::after {font-size: 1.7rem;}
+    .recipepro-block .right-box {display: none;}
+    .member-tab-pill {flex-direction: row;justify-content: center;padding-bottom: 10px;border-bottom: 1px solid #ccc;margin-bottom: 20px;}
+    .product-info::before{display: none;}
+    .product-top .right-box{margin-top: 20px;}
+
+    /*--------鮮味調味料--------*/
+    .dr-block .row{flex-direction: row; max-height: none;}
+    .dr-block .box{max-width: none;}
+
+    
+    /* 2020/01/03 SELECTED 嚴選素材*/
+    .selected-box:nth-child(4),
+    .selected-box:nth-child(5),
+    .selected-box:nth-child(7),
+    .qulity-check .col-md-8 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .selected-box:nth-child(4) {
+        background: url(../img/selected/selectedBG01m.png)no-repeat center / cover;
+    }
+    .selected-box:nth-child(5) {background: #cde9f6 url(../img/selected/selectedBG02m.png)no-repeat center bottom / contain}
+}
+
+@media screen and (max-width: 768px) {
+    .index-recipe-block {padding-bottom: 0;}
+    .recipe-display {display: none;}
+    .item-box, .item-box::after, .item-box a {width: 250px;height: 250px;}
+    .item-box p {max-width: 170px;}
+    .item-box .icon {width: 40px;height: 40px;}
+    .item-box .item {max-width: 90px;max-height: 120px;}
+    .ad-box>div img {max-width: 350px;}
+    .higi-display .list-box .img-box {width: 30%;}
+    .higi-display .list-box .text-box {width: calc(100% - 35%);}
+    .higi-display .higi-box img {display: none;}
+
+    /* 0203edit */
+    .member-icon span {
+        top: -73px;
+        left: 0px;
+    }
+    .refer-display .list-box .member-icon span{left: -4px;}
+    .member-icon.small-tag {font-size: 0.9rem;}
+
+    .recipepro-block .description{
+        -webkit-line-clamp: 4;
+    }
+     /* 0203edit */
+    .higidetail-block .right-box .img-box, .higidetail-block .right-box .img-box img {height: 235px;}
+    .recipepro-info-block .method-box {margin-bottom: 50px;}
+    .recipe-group .list-box .img-box {max-width: 100px}
+    .recipepro-block .left-box .img-box{max-height: none;}
+    /*--------鮮味調味料--------*/
+    .safety-block .circle-box:after{
+        content: unset;
+        background: none;
+    }
+    .block::before{
+        border: none;
+        background-color: #fafafa;
+    }
+    .dr-block .dr-box h4 {
+        font-size: 2rem;
+    }
+
+    
+    /* 2020/01/03 SELECTED 嚴選素材*/
+    .selected-box h3 {font-size: 1.2rem;}
+    .selected-box:nth-child(4), .selected-box:nth-child(5), .selected-box:nth-child(7), .qulity-check .col-md-8 {padding-left: 20px;padding-right: 20px;}
+    .qulity-check .col-md-8:before {
+        border-style: solid;
+        border-width: 80px 50px 0 50px;
+        border-color: #ffe9ee transparent transparent transparent;
+        bottom: -10%;
+        left: 30%;
+    }
+    .selected-box:nth-child(5) {background: #cde9f6 url(../img/selected/selectedBG02m.png)no-repeat right bottom / contain;}
+    .selected-box .wood .col-md-3 {display: none;}
+    .selected-box .environment img {max-width: 150px}
+    .nature-box .col-md-8 img {max-width: 300px;}
+    .nature-box .col-md-3 img {max-width: 100%;}
+    .selected-block .resp-container{padding-top: 56.25%;height: auto;}
+}
+
+@media screen and (max-width: 576px) {
+    .breadcrumb {display: none;}
+    /* 0203 edit */
+    /* .member-icon {height: 80px;width: 80px;line-height: 80px;} */
+     /* 0203 edit */
+    .index-recipe-block .text-box {position: relative;}
+    .index-recipe-block .box {margin-bottom: 25px;}
+    .index-news-block, .index-recipe-block {padding-bottom: 50px;padding-top: 50px;   }
+    .product-display .swiper-button-next {right: 0;}
+    .product-display .swiper-button-prev {left: 0;}
+    .list-box .text-box span {font-size: 0.9rem;}
+    .higi-display .list-box .img-box {width: 160px;height: 160px;}
+    .higi-display .list-box .text-box {width: calc(100% - 190px);}
+    .recipe-group .list-box .img-box {max-width: 350px;width: 100%;}
+    .recipe-group .list-box a {text-align: center;}
+    .recipe-group .list-box .text-box {max-width: 350px;width: 100%;margin-left: 0px;margin-top: 20px;text-align: left;}
+    .recipepro-block {padding: 0;}
+    .type-box {padding-top: 20px;margin-bottom: 20px;}
+    .recipepro-block .type-box li {width: calc(100% / 2 - 20px);min-width: 100px;margin: 5px;}
+    .recipepro-block .type-box li:last-child{width: auto;}
+    .recipepro-block .type-box p span {display: block;font-size: 0.9rem;line-height: normal;}
+    .recipeproDetail-page .m-tb50 {margin: 20px 0;}
+    .recipepro-info-block .method-box {padding: 20px;background: #fafafa;border-radius: 15px;position: relative;margin-bottom: 20px;}
+    .recipepro-info-block .method-box .recipe-box {display: inline-block;border: none;}
+    .recipepro-info-block .recipe-box .text-box {display: none;}
+    .recipepro-info-block, .recipepro-info-block p, .type-box {font-size: 0.9rem;}
+    .recipepro-info-block .row {padding: 0 15px;}
+    .recipepro-block .type-box p {vertical-align: bottom;}
+    .nutrition-block p {display: block;}
+    .type-box{display: flex;flex-wrap: wrap; }
+
+    .safety-content .block{padding-bottom: 20px;}
+    .dr-block .dr-box{display: block;}
+    .dr-block .dr-box .img-box{float:right;}
+    .dr-block .dr-box .text-box{width: 100%;}
+    .safety-block .circle{margin-top: 0;}
+    .dr-block .box{margin: 0 auto 20px;min-height: 1px;}
+    .faq-content h4{font-size: 1rem;}
+    .faq-content h4::after{right:0px}
+    .safety-page .modal-body{font-size: 0.9rem;}
+
+    
+
+}
+
+@media screen and (max-width: 468px) {
+    
+    .main-title {margin-bottom: 50px;}
+    .subheader {padding-top: 20px;margin-bottom: 40px;}
+    .inner {padding: 30px 0;}
+    .list-box .tag-box {margin-top: 10px;}
+    .list-box .text-box{margin-left: 15px;}
+
+    .tag-box .tag {margin-bottom: 5px;}
+    .scrollToTop {bottom: 4%;right: 4%;}
+
+    .productDetail-page .inner .text-box{padding: 15px;}
+    .product-info {border: 20px solid #f7bbad;}
+    .product-info>div {margin: 15px 0;}
+    .product-info-box {font-size: 0.9rem;}
+    .product-info-box .text-e {min-width: 60px;}
+    .product-info-box .text-h{min-width: 68px;}
+    .refer-display {margin-top: 0;}
+    .refer-display .container .row {margin-top: 20px;}
+    .recipepro-result {margin-top: 0;}
+    .safety-content{margin-top: 50px;}
+    .safety-content p{
+        font-size: 0.9rem;
+   }
+    .block::before{
+        border: none;
+        background-color: #fafafa;
+        width: 100%;
+    }
+
+    .block::after{
+        content: unset;
+    }
+
+    .dr-block .dr-box .img-box{float:none;margin: 0 auto;width: 60%;}
+    .certify h4{font-size: 1.2rem; margin-bottom: 20px;}
+
+    /* 2020/01/03 SELECTED 嚴選素材*/
+    .dry-box li{width: 47%;margin-right: 5px;}
+
+     /* 0203 edit */
+    .member-icon {border-width: 80px 80px 0 0;}
+    .member-icon span {top: -59px;left: -2px;width: 70px;font-size:1rem}
+
+    .member-icon.small-tag{
+        border-width: 70px 70px 0 0;
+    }
+    .member-icon.small-tag span{
+        top: -54px;
+        left: -6px;
+    }
+
+     /* 0203 edit */
+}
+
+@media screen and (max-width: 430px) {
+    .content, .inner {min-height: auto;}
+    .list-box .text-box span {padding-bottom: 10px;}
+    .list-box a .text-box p {font-size: 0.9rem;line-height: 1.5rem;padding-top: 10px;}
+    .index-news-block .list-box {text-align: center;}
+    .index-news-block .list-box a>div {width: calc(100% - 30px);max-width: 100%;}
+    .index-news-block .list-box .text-box {margin-left: 0;margin-top: 20px;text-align: left;}
+    .campaign-page .list-box {padding: 0 15px;margin: 10px 0;}
+    .campaign-page .list-box a>div {max-width: 50%;}
+    .campaign-page .list-box .text-box {margin-left: 10px;}
+    .form-box .v-code p {margin-left: 0;}
+    .fav-block .list-box .img-box{width: 85px;height: 85px;}
+
+    /* 0203edit 圓角會員限定樣式 */
+    .fav-block .list-box span.member-icon, .search-result .list-box span.member-icon{padding: 3px 10px;}
+    /* 0203edit 圓角會員限定樣式 */
+
+    .higidetail-block .right-box .img-box, .higidetail-block .right-box .img-box img {height: 152.5px;} 
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>台灣味之素外食通路網-會員註冊</title>
+    <!-- All Sites Css START -->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/fontawesome.5.10.1-all.min.css">
+    <link rel="stylesheet" href="dist/boostrap4.0/css/bootstrap.min.css">
+    <!-- All Sites Css END -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="wrapper">
+        <!-- NAV -->
+
+        <!-- 內容 START -->
+        <section class="member-page content">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">會員註冊</li>
+                    </ol>
+                </nav>
+                <div class="page main-title m-b80">
+                    <h2 data-title="SIGN UP">會員註冊</h2>
+                </div>
+            </div>
+            <div class="inner p-tb50 bg-Light">
+                <div class="container">
+                    <form action="">
+                        <div class="form-box">
+
+                            <h4 class="third-title m-b20"><img src="img/baker.svg">個人資訊</h4>
+
+                            <div class="form-group row">
+                                <label for="name" class="col-sm-2 col-form-label">真實姓名</label>
+                                <div class="col-sm-7">
+                                    <input type="name" class="form-control form-control-sm" id="name"
+                                        placeholder="請輸入姓名">
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="sir" value="sir"
+                                            checked="">
+                                        <label class="form-check-label" for="gender">先生</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="ms" value="ms">
+                                        <label class="form-check-label" for="gender">小姐</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-2 col-form-label">電子信箱</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control form-control-sm" id="email"
+                                        placeholder="請輸入電子信箱">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="phone" class="col-sm-2 col-form-label">聯絡電話</label>
+                                <div class="col-sm-10">
+                                    <input type="tel" class="form-control form-control-sm" id="phone"
+                                        placeholder="請輸入聯絡電話">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="col-sm-2 col-form-label">輸入密碼</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control form-control-sm" id="password"
+                                        placeholder="請輸入密碼">
+                                        <span>英數組合，最少8碼</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="checkPassword" class="col-sm-2 col-form-label">確認密碼</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control form-control-sm" id="checkPassword"
+                                        placeholder="請輸入密碼">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-box m-t50">
+                            <h4 class="third-title m-b20"><img src="img/bakery.svg">餐廳資訊</h4>
+                            <div class="form-group row">
+                                <label for="restaurentname" class="col-sm-2 col-form-label">餐廳名稱</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-sm" id="restaurentname"
+                                    placeholder="請輸入餐廳名稱">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="location" class="col-sm-2 col-form-label">縣/市</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control form-control-sm" id="location">
+                                        <option selected="">請選擇</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>                     
+                            </div>
+                            <div class="form-group row">
+                                    <label for="location" class="col-sm-2 col-form-label">鄉/鎮/區/市</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control form-control-sm" id="location">
+                                            <option selected="">請選擇</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            <div class="form-group row">
+                                <label for="sort" class="col-sm-2 col-form-label">經營型態</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control form-control-sm" id="sort">
+                                        <option selected="">中式</option>
+                                        <option>日式</option>
+                                        <option>西式</option>
+                                        <option>火鍋</option>
+                                        <option>複合</option>
+                                        <option>素食</option>
+                                        <option>連鎖體系</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="checkbox">
+                                <label class="form-check-label" for="checkbox">我已閱讀並同意<a href="member-terms.html"
+                                        target="_blank">會員條款</a>及<a href="privacy.html"
+                                        target="_blank">個人資料保護政策</a></label>
+                            </div>
+                            <div class="text-center"> <button type="reset"
+                                    class="cancel-btn primary-btn m-lr20">取消</button><button type="submit"
+                                    class="primary-btn m-lr20">註冊</button></div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- 內容 END -->
+
+        <!-- Footer-->
+    </section>
+
+    <!-- ALL SITE JS START -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="dist/boostrap4.0/js/popper.min.js"></script>
+    <script src="dist/boostrap4.0/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+    <!-- ALL SITE JS END-->
+</body>
+
+</html>
